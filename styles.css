@@ -406,8 +406,8 @@ html[data-theme="light"] .hero-visual {
   right: 0;
   top: 120%;
   list-style: none;
-  background: var(--surface);
-  backdrop-filter: var(--blur);
+  background: rgba(20, 20, 25, 0.85); /* 🔥 más oscuro */
+  backdrop-filter: blur(12px);
   border-radius: 12px;
   padding: 6px;
   margin: 0;
