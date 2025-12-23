@@ -1,103 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
-    <title>ReSolGo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="ReSolGo is a global technology holding building systems, products and innovation-driven ventures."/>
+  <meta name="theme-color" content="#0b0d10" />
+  <meta name="color-scheme" content="dark light" />
+
+  <meta property="og:title" content="ReSolGo — Global Technology Holding" />
+  <meta property="og:description" content="Building systems, products and companies for a global scale." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://resolgo.com" />
+  <meta property="og:image" content="https://resolgo.com/og.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>ReSolGo — Global Technology Holding</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate" hreflang="en" href="https://resolgo.com" />
+  <link rel="alternate" hreflang="es" href="https://resolgo.com?lang=es" />
+  <link rel="alternate" hreflang="pt" href="https://resolgo.com?lang=pt" />
+  <link rel="alternate" hreflang="fr" href="https://resolgo.com?lang=fr" />
+  <link rel="alternate" hreflang="x-default" href="https://resolgo.com" />
+
 </head>
 <body>
 
-    <header>
-        <div class="header-container">
-          <div class="logo">
-            <img src="./img/fulllogo_transparent_nobuffer.png" alt="Resolgo logo">
-          </div>
-          <nav class="nav-menu">
-            <ul>
-              <li><a href="#About_us">About us</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#Projects">Projects</a></li>
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="mailto:resolo4@gmail.com">Speak with us</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>      
-      
-    <main>
-        <section id="About_us">
-          <p class="first-letter-large">
-            Resolgo is a technology company that helps you succeed in the digital age. They offer customized solutions such as web development and mobile applications, and will soon also offer data science and cybersecurity services. Resolgo takes pride in delivering exceptional service using the latest technologies and industry best practices. They believe that technology can help you grow and are committed to your satisfaction. If you're looking for technological assistance for your business, Resolgo is the solution for you!
+  <!-- Top Bar -->
+  <header class="top-bar glass">
+    <a class="logo-inline impact" href="index.html" aria-label="ReSolGo">
+        <span class="logo-text glow">Re</span>
+        <span class="core" aria-hidden="true"></span>
+        <span class="logo-text glow">Go</span>
+    </a>
+
+
+
+    <div class="controls">
+      <!-- Language Selector -->
+      <div class="lang-selector">
+        <button id="langToggle" aria-haspopup="true" aria-expanded="false">EN</button>
+        <ul class="lang-menu" id="langMenu" role="menu">
+          <li role="menuitem" data-lang="en">English</li>
+          <li role="menuitem" data-lang="es">Español</li>
+          <li role="menuitem" data-lang="pt">Português</li>
+          <li role="menuitem" data-lang="fr">Français</li>
+        </ul>
+      </div>
+
+
+      <!-- Theme -->
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero reveal">
+      <h1
+        data-en="Building systems, products and companies for a global scale."
+        data-es="Construimos sistemas, productos y empresas a escala global."
+        data-pt="Construímos sistemas, produtos e empresas em escala global."
+        data-fr="Nous construisons des systèmes, des produits et des entreprises à l'échelle mondiale.">
+        Building systems, products and companies for a global scale.
+      </h1>
+
+      <p
+        data-en="ReSolGo is a technology holding focused on innovation, automation and digital infrastructure."
+        data-es="ReSolGo es un holding tecnológico enfocado en innovación, automatización e infraestructura digital."
+        data-pt="ReSolGo é um holding de tecnologia focado em inovação, automação e infraestrutura digital."
+        data-fr="ReSolGo est un holding technologique axé sur l'innovation, l'automatisation et l'infrastructure numérique.">
+        ReSolGo is a technology holding focused on innovation, automation and digital infrastructure.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#ventures"
+          data-en="Explore our structure"
+          data-es="Explorar estructura"
+          data-pt="Explorar estrutura"
+          data-fr="Découvrir notre structure">
+          Explore our structure →
+        </a>
+      </div>
+      <div class="hero-visual" aria-hidden="true"></div>
+    </section>
+
+    <!-- Structure & Ventures -->
+    <section class="ventures reveal">
+      <h2
+        data-en="Structure & Ventures"
+        data-es="Estructura y Empresas"
+        data-pt="Estrutura e Empresas"
+        data-fr="Structure et entreprises">
+        Structure & Ventures
+      </h2>
+
+      <p class="ventures-intro"
+        data-en="ReSolGo operates as a holding company, creating and managing independent ventures across technology, products and innovation."
+        data-es="ReSolGo opera como una empresa holding, creando y gestionando empresas independientes en tecnología, productos e innovación."
+        data-pt="ReSolGo opera como uma holding, criando e gerenciando empresas independentes em tecnologia, produtos e inovação."
+        data-fr="ReSolGo opère en tant que holding, créant et gérant des entreprises indépendantes dans la technologie, les produits et l'innovation.">
+        ReSolGo operates as a holding company, creating and managing independent ventures across technology, products and innovation.
+      </p>
+
+      <div class="venture-grid">
+
+        <div class="venture-card reveal">
+          <span class="venture-icon">⚙️</span>
+          <h3><a href="tech.html">ReSolGo Tech</a></h3>
+          <p
+            data-en="Core technology and systems development."
+            data-es="Desarrollo de tecnología central y sistemas."
+            data-pt="Desenvolvimento de tecnologia central e sistemas."
+            data-fr="Développement de technologie centrale et de systèmes.">
+            Core technology and systems development.
           </p>
+          <span class="status">ACTIVE</span>
+        </div>
 
-        </section>
+        <div class="venture-card reveal">
+          <span class="venture-icon">📦</span>
+          <h3>ReSolGo Apps</h3>
+          <p
+            data-en="Digital products and software platforms."
+            data-es="Productos digitales y plataformas de software."
+            data-pt="Produtos digitais e plataformas de software."
+            data-fr="Produits numériques et plateformes logicielles.">
+            Digital products and software platforms.
+          </p>
+          <span class="status building">BUILDING</span>
+        </div>
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-              <li>
-                <img src="./img/web-development.jpg" alt="Web Development">
-                <h3>Web Development</h3>
-                <p>We offer custom web development services to help you create a website that reflects your brand and meets your business needs.</p>
-              </li>
-              <li>
-                <img src="./img/mobile-app-2_1592887923.jpg" alt="Mobile Applications">
-                <h3>Mobile Applications</h3>
-                <p>We specialize in developing cross-platform mobile apps that provide seamless experiences across iOS and Android devices.</p>
-              </li>
-              <li>
-                <img src="./img/data-science.jpg" alt="Data Science Services">
-                <h3>Data Science Services (Coming Soon)</h3>
-                <p>Our data science services will help you analyze and leverage data to gain insights and make better business decisions.</p>
-              </li>
-              <li>
-                <img src="./img/cybersecurity.jpg" alt="Cybersecurity Services">
-                <h3>Cybersecurity Services (Coming Soon)</h3>
-                <p>Our cybersecurity services will help you protect your business from cyber threats and keep your data and systems secure.</p>
-              </li>
-            </ul>
-        </section>
-          
-        <section id="Projects">
-            <h1>Projects</h1>
-            <img src="./img/Coming_soon.jpg" alt="" srcset="">
-        </section>
-            
-        <section id="blog">
-            <h3>Blog</h3>
-            <img src="./img/Coming_soon.jpg" alt="" srcset="">
-        </section>
-       
-    </main>
-      
-    <footer>
-        <div class="contact">
-          <h3>Contacto</h3>
-          <p>Contáctanos:</p>
-          <a href="mailto:resolgo4@gmail.com">resolgo4@gmail.com</a>
+        <div class="venture-card reveal">
+          <span class="venture-icon">🔗</span>
+          <h3>ReSolGo APIs</h3>
+          <p
+            data-en="Scalable APIs and infrastructure services."
+            data-es="APIs escalables y servicios de infraestructura."
+            data-pt="APIs escaláveis e serviços de infraestrutura."
+            data-fr="APIs évolutives et services d'infrastructure.">
+            Scalable APIs and infrastructure services.
+          </p>
+          <span class="status building">BUILDING</span>
         </div>
-        <div class="social">
-          <h3>Síguenos</h3>
-          <p>Síguenos en nuestras redes sociales:</p>
-          <ul>
-            <li><a href="#"><i class="fab fa-facebook-f"><img src="./img/icons8-facebook-48.png" alt="Facebook"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"><img src="./img/icons8-twitter-48.png" alt="twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"><img src="./img/icons8-instagram-48.png" alt="instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin-in"><img src="./img/icons8-linkedin-48.png" alt="linkedin"></i></a></li>
-          </ul>
+
+        <div class="venture-card reveal">
+          <span class="venture-icon">🧪</span>
+          <h3>ReSolGo Lab</h3>
+          <p
+            data-en="Research, experiments and innovation."
+            data-es="Investigación, experimentos e innovación."
+            data-pt="Pesquisa, experimentos e inovação."
+            data-fr="Recherche, expériences et innovation.">
+            Research, experiments and innovation.
+          </p>
+          <span class="status vision">VISION</span>
         </div>
-        <div class="copyright">
-          <p>&copy; 2023 Resolgo. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-    <a href="#" class="scroll-to-top"><i class="fas fa-arrow-up">
-      <button class="scroll-to-top" aria-label="Scroll to top">
-        <span class="arrow-up"></span>
-      </button>
-      
-    </i></a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <span data-en="© ReSolGo" data-es="© ReSolGo" data-pt="© ReSolGo" data-fr="© ReSolGo">© ReSolGo</span>
+    <span
+      data-en="Universal · Independent · Technology"
+      data-es="Universal · Independiente · Tecnología"
+      data-pt="Universal · Independente · Tecnologia"
+      data-fr="Universel · Indépendant · Technologie">Universal · Independent · Technology</span>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
