@@ -406,7 +406,7 @@ html[data-theme="light"] .hero-visual {
   right: 0;
   top: 120%;
   list-style: none;
-  background: rgba(20, 20, 25, 0.85); /* 🔥 más oscuro */
+  background: rgba(87, 87, 197, 0.85); /* 🔥 más oscuro */
   backdrop-filter: blur(12px);
   border-radius: 12px;
   padding: 6px;
