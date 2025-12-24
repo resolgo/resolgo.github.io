@@ -39,19 +39,25 @@
 
 
     <div class="controls">
-      <!-- Language Selector -->
-      <div class="lang-selector">
-        <button id="langToggle" aria-haspopup="true" aria-expanded="false">EN</button>
-        <ul class="lang-menu" id="langMenu" role="menu">
-          <li role="menuitem" data-lang="en">English</li>
-          <li role="menuitem" data-lang="es">Español</li>
-          <li role="menuitem" data-lang="pt">Português</li>
-          <li role="menuitem" data-lang="fr">Français</li>
-        </ul>
-      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <div class="control-stack" id="controlStack">
+        <a class="contact-top" href="contact.html" aria-label="Contact">
+          <span class="icon" aria-hidden="true">✉️</span>
+        </a>
+        <!-- Language Selector -->
+        <div class="lang-selector">
+          <button id="langToggle" aria-haspopup="true" aria-expanded="false">EN</button>
+          <ul class="lang-menu" id="langMenu" role="menu">
+            <li role="menuitem" data-lang="en">English</li>
+            <li role="menuitem" data-lang="es">Español</li>
+            <li role="menuitem" data-lang="pt">Português</li>
+            <li role="menuitem" data-lang="fr">Français</li>
+          </ul>
+        </div>
 
-      <!-- Theme -->
-      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <!-- Theme -->
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+      </div>
     </div>
   </header>
 

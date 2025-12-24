@@ -26,6 +26,9 @@ if (themeToggle && html) {
 const langToggle = document.getElementById("langToggle");
 const langMenu = document.getElementById("langMenu");
 const langItems = langMenu ? langMenu.querySelectorAll("li") : [];
+const menuToggle = document.getElementById("menuToggle");
+const controlStack = document.getElementById("controlStack");
+let menuTimeout;
 
 let currentLang = localStorage.getItem("lang") || "en";
 
@@ -48,9 +51,54 @@ const updateLanguage = (lang) => {
 
 updateLanguage(currentLang);
 
+// ===== MOBILE MENU (toggle controls) =====
+const closeControlStack = () => {
+  if (controlStack) {
+    controlStack.classList.remove("open");
+  }
+  if (menuToggle) {
+    menuToggle.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
+  if (menuTimeout) {
+    clearTimeout(menuTimeout);
+    menuTimeout = null;
+  }
+};
+
+if (menuToggle && controlStack) {
+  menuToggle.onclick = (e) => {
+    e.stopPropagation();
+    const isOpen = controlStack.classList.toggle("open");
+    menuToggle.classList.toggle("open", isOpen);
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    if (isOpen) {
+      menuTimeout = setTimeout(() => closeControlStack(), 30000);
+    } else {
+      closeControlStack();
+    }
+  };
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".controls")) {
+      closeControlStack();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      closeControlStack();
+    }
+  });
+}
+
 // Toggle menu
 if (langToggle && langMenu) {
   langToggle.onclick = () => {
+    if (controlStack && controlStack.classList.contains("open")) {
+      // keep controls open while toggling languages
+      menuToggle?.setAttribute("aria-expanded", "true");
+    }
     const isOpen = langMenu.classList.toggle("show");
     langToggle.setAttribute("aria-expanded", isOpen);
   };
